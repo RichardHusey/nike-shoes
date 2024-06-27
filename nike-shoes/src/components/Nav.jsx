@@ -5,7 +5,7 @@ import NikeLogo from "../assets/nike-logo.svg?react";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const ROUTES = ["Home", "About", "Services", "Pricing", "Contact"];
-const Nav = () => {
+const Nav = ({ onClickShoppingBtn }) => {
   const [isMobileMenuShown, setIsMobileMenuShown] = useState(false);
   return (
     <nav className="z-10 relative flex flex-wrap items-center justify-between">
@@ -37,7 +37,7 @@ const Nav = () => {
       </div>
 
       {/* Cart button */}
-      <div className="btn-press-anim fixed bottom-4 left-4 lg:static lg:mr-8">
+      <div onClick={onClickShoppingBtn} className="btn-press-anim fixed bottom-4 left-4 lg:static lg:mr-8">
         <div className="flex-center cursor-pointer h-12 w-12 rounded-full bg-white shadow-md">
           <TbShoppingBag />
         </div>

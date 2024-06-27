@@ -13,7 +13,7 @@ const Select = ({ title, options }) => {
           </option>
         ))}
       </select>
-      <div className="flex-center absolute inset-y-0 right-0 pr-3">
+      <div className="pointer-events-none flex-center absolute inset-y-0 right-0 pr-3">
         <IoIosArrowDown/>
       </div>
     </div>
